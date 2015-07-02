@@ -16,6 +16,11 @@ class SkillsController < ApplicationController
     end
   end
 
+
+    def show
+      @skill = Skill.find(params[:id])
+    end
+
   def edit
     @skill = Skill.find(params[:id])
   end

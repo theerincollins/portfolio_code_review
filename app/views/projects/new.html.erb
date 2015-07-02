@@ -1,0 +1,11 @@
+<h1>Add a Project</h1>
+
+<%= form_for [@skill, @project] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <%= f.submit %>
+<% end %>
