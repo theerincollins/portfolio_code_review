@@ -8,6 +8,7 @@ class ProjectsController < ApplicationController
     @skill = Skill.find(params[:skill_id])
     @project = @skill.projects.new(project_params)
     if @project.save
+      flash[:notice] = "Sweet Project!"
       redirect_to skill_path(@project.skill)
     else
       render :new

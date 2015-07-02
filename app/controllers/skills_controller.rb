@@ -10,6 +10,7 @@ class SkillsController < ApplicationController
   def create
     @skill = Skill.new(skill_params)
     if @skill.save
+      flash[:notice] = "Sweet Skillz!"
       redirect_to skills_path
     else
       render :new
