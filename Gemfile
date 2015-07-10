@@ -11,7 +11,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'quiet_assets'
 gem 'textacular', '~> 3.0'
-gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.1.5', require: "bcrypt"
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
@@ -29,7 +28,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'capybara'
-
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 end
 
 group :test do
