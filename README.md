@@ -23,6 +23,11 @@ Setup
     rake db:create
     rake db:migrate
     To utilize admin features, add a user then run User.find(#id).update(:admin => true) in the command line. #id is the user_id of the user to be admin.
+
+Heroku Link
+Attempted to deploy to Heroku, however app is no longer working when on Heroku. This can be seen at the following link. Sorry Debbie :(
+https://whispering-sea-4492.herokuapp.com/
+
 License
 
 This is free and unencumbered software released into the public domain.
