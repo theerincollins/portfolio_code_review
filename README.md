@@ -1,11 +1,36 @@
-User Stories
+Epicodus Portfolio
 
--DONE - As an administrator, I want to be able to add, edit and delete categories for coding skills (Properties can include name and experience description. For example: Name => Ruby; Description => Ruby was the first language I began programming in. I have since built over 20 small apps using Sinatra, Rails, Postgres...)
+This application is meant to fulfill the requirements of an assignment through Epicodus code school. For more information on Epicodus, see http://www.epicodus.com/.
 
-- DONE - As an administrator, I want to be able to add, edit and delete coding projects for each skill/category (include name, description, link to Github).
+Description
 
-- DONE - As a visiting user, I want to be able to see your personal information and a list of coding skills on the homepage.
+Code Review Portfolio App in rails
 
-- DONE - As a visiting user, I want to be able to click each coding skill category to see the description of your experience and the list of projects that reflect the skill/category.
+Assignment: Rails Authentication Code Review
 
--As a user, I want to be able to click on each project to get more information.
+https://www.learnhowtoprogram.com/lessons/rails-authentication-code-review
+
+Author(s)
+
+Erin Collins
+
+Prerequisites
+
+    Postgres server
+Setup
+
+    bundle install
+    rake db:create
+    rake db:migrate
+    To utilize admin features, add a user then run User.find(#id).update(:admin => true) in the command line. #id is the user_id of the user to be admin.
+License
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+
+In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to http://unlicense.org/
