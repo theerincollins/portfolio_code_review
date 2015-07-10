@@ -28,9 +28,10 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'letter_opener'
+  gem 'capybara'
+
 end
 
 group :test do
-  gem 'capybara'
   gem 'simplecov', require: false
 end

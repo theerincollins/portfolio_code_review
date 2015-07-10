@@ -1,0 +1,12 @@
+<h1>Thoughts and Such</h1>
+
+<% @posts.each do |post| %>
+  <h3><%= post.title %></h3>
+  <p><%= post.description %></p>
+  <% if post.comments.any? %>
+    <% post.comments.each do |comment| %>
+      <p><%= comment.description %></p>
+      <p>Posted By: <%= User.find(comment.user_id).username %></p>
+    <% end %>
+  <% end %>
+<% end %>

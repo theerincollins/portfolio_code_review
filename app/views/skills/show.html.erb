@@ -5,10 +5,10 @@
     <% @skill.projects.each do |project| %>
       <li> <b><%= link_to project.title, skill_project_path(@skill, project) %></b> <br> <%= project.description %>
         <% if current_user && current_user.admin %>
-          <%= link_to image_tag("trash-can.png"), skill_project_path(@skill, project),
+          <%= link_to image_tag("trash-can.png"), skill_project_path(@skill, project), class:"delete",
                              :data => {:confirm => "Are you sure?",
                                             :method => "delete"} %> |
-          <%= link_to "Edit", edit_skill_project_path(@skill, project) %>
+          <%= link_to image_tag("pencil.png"), edit_skill_project_path(@skill, project), class:"delete" %>
         <% end %></li>
     <% end %>
   </ul>

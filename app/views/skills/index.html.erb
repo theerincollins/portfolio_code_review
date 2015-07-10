@@ -8,10 +8,10 @@
       <% @skills.each do |skill| %>
         <li><%= link_to skill.name, skill_path(skill) %>
           <% if current_user && current_user.admin %>
-            <%= link_to image_tag("trash-can.png"), skill_path(skill),
+            <%= link_to image_tag("trash-can.png"), skill_path(skill), class:"delete",
                              :data => {:confirm => "Are you sure?",
                                             :method => "delete"} %> |
-            <%= link_to "Edit", edit_skill_path(skill) %></li>
+            <%= link_to image_tag("pencil.png"), edit_skill_path(skill), class:"delete" %></li>
         <% end %>
       <% end %>
     </ul>
