@@ -4,14 +4,18 @@
   <ul>
     <% @skill.projects.each do |project| %>
       <li> <b><%= link_to project.title, skill_project_path(@skill, project) %></b> <br> <%= project.description %>
-        <%= link_to "Delete", skill_project_path(@skill, project),
+        <% if current_user && current_user.admin %>
+          <%= link_to image_tag("trash-can.png"), skill_project_path(@skill, project),
                              :data => {:confirm => "Are you sure?",
                                             :method => "delete"} %> |
-        <%= link_to "Edit", edit_skill_project_path(@skill, project) %> </li>
+          <%= link_to "Edit", edit_skill_project_path(@skill, project) %>
+        <% end %></li>
     <% end %>
   </ul>
 <% else %>
   <p>Apparantly I'm not very good at that skill after all</p>
 <% end %>
 
-<%= link_to "Add a Project to this Skill", new_skill_project_path(@skill) %>
+<% if current_user && current_user.admin %>
+  <%= link_to "Add a Project to this Skill", new_skill_project_path(@skill) %>
+<% end %>

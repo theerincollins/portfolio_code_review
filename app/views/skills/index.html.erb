@@ -1,24 +1,5 @@
-<div class="container">
+
   <div class="about-content row">
-    <div class="col-sm-6">
-      <div class="col-sm-4">
-        <div class="image-div">
-        </div>
-      </div>
-
-      <div class="about-text col-sm-8">
-        <h1>About</h1>
-        <p class="about-text">Erin Here! I am a full stack web developer with professional
-        front-end experience, a brain full of back-end knowledge, a
-        mechanical engineering background, and a crazy awesome work ethic.
-        You should probably just go ahead and hire me now.</p>
-        <ul>
-          <li><b>Phone</b> 407-446-1730</li>
-          <li><b>Email</b> erincollinsthethird@gmail.com</li>
-        </ul>
-      </div>
-
-    </div>
 
   <div class="col-sm-6">
     <h1>How Skilled Am I?</h1>
@@ -26,14 +7,16 @@
     <ul>
       <% @skills.each do |skill| %>
         <li><%= link_to skill.name, skill_path(skill) %>
-        <%= link_to "Delete", skill_path(skill),
+          <% if current_user && current_user.admin %>
+            <%= link_to image_tag("trash-can.png"), skill_path(skill),
                              :data => {:confirm => "Are you sure?",
                                             :method => "delete"} %> |
-        <%= link_to "Edit", edit_skill_path(skill) %></li>
+            <%= link_to "Edit", edit_skill_path(skill) %></li>
+        <% end %>
       <% end %>
     </ul>
-
+    <% if current_user && current_user.admin %>
       <%= link_to "Add a Skill", new_skill_path %>
+    <% end %>
     </div>
   </div>
-</div>
