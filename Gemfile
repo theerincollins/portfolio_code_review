@@ -28,7 +28,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'letter_opener'
   gem 'capybara'
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'sqlite3'
 end
 
 group :test do
