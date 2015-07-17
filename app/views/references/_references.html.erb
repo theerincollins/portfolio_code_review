@@ -1,0 +1,13 @@
+<div class="container">
+  <% if @references.any? %>
+    <ul class="list-unstyled references-list">
+      <% @references.each do |reference| %>
+        <li>
+          <%= reference.name %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+      <p>Looks like someone needs to do some networking</p>
+  <% end %>
+</div>

@@ -14,5 +14,15 @@
           <li><b>Phone</b> 407-446-1730</li>
           <li><b>Email</b> erincollinsthethird@gmail.com</li>
         </ul>
-        
+
+        <%= link_to "See References", references_path, :id => "see-references", remote: true %></br>
+        <%= link_to "Add a Reference", new_reference_path, :id => "add-reference", remote: true %>
+
+        <div id="references-div">
+          <p>test</p>
+        </div>
+
+        <div id="add-reference-div">
+        </div>
+
       </div>
