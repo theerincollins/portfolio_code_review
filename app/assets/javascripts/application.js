@@ -15,11 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-
-<script>
-  $('#see-references').click(function (event) {
-    alert('Hooray!');
-    $('#see-references').hide().after('<%= j render("references") %>');
-    event.preventDefault(); // Prevent link from following its href
-  });
-</script>
