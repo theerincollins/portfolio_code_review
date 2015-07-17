@@ -7,11 +7,13 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
-
     if @comment.save
       current_user.comments.push(@comment)
       flash[:notice] = "Now that's a good point."
-      redirect_to posts_path
+      respond_to do |format|
+        format.html {redirect_to posts_path}
+        format.js
+      end
     else
       flash[:alert] = "Hmm, looks like something went wrong."
       render :new

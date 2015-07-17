@@ -1,0 +1,3 @@
+$("#add-comment").show();
+$(".comments").html('<%= j render(@comment) %>');
+$(".notice").html("<%= flash[:notice] %>");
