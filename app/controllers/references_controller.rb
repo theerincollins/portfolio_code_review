@@ -14,13 +14,15 @@ class ReferencesController < ApplicationController
 
   def new
     @reference = Reference.new
+    @references = Reference.all
   end
 
   def create
+    @references = Reference.all
     @reference = Reference.new(reference_params)
     if @reference.save
       respond_to do |format|
-        format.html {redirect_to posts_path}
+        format.html {redirect_to root_path}
         format.js
       end
     else
